@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Todo</title>
+</head>
+<body>
+    <h1>Edit Todo</h1>
+      <form action="/update/<%= todo.id %>" method="POST">
+        <label for="title">Title:</label><br>
+        <p><%= todo.title %></p>
+        <input type="text" id="title" name="title" value="<%= todo.title %>"><br>
+        <label for="completed">Completed:</label><br>
+        <input type="checkbox" id="completed" name="completed" <%= todo.completed ? 'checked' : '' %>><br>
+        <input type="submit" value="Update Todo">
+      </form>
+    </body>
+    </html>

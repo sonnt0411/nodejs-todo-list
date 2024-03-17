@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo List</title>
+</head>
+<body>
+    <h1>Todo List</h1>
+    <a href="/create">Create Todo</a>
+    <ul>
+        <% todos.forEach(function(todo) { %>
+            <li>
+                <span><%= todo.title %></span>
+                <span><%= todo.completed ? 'Completed' : 'Not completed' %></span>
+                <a href="/edit/<%= todo.id %>">Edit</a>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
